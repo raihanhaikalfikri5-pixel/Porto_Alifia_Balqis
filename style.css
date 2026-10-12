@@ -1,0 +1,398 @@
+/* Custom Coquette Aesthetic Variables */
+:root {
+    --coquette-pink: #fce4ec;      /* Soft Ribbon Pink */
+    --coquette-rose: #f8bbd0;      /* Medium Rose */
+    --coquette-accent: #d81b60;    /* Deep Berry Pink */
+    --coquette-cream: #fff9fb;     /* Warm Lace Cream */
+    --coquette-sage: #849377;      /* Soft Floral Leaf Sage */
+    --coquette-text: #4a3e3d;      /* Warm Charcoal Brown */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Reset & Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--coquette-text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    background-color: var(--coquette-cream);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Pattern Coquette: Floral Vector SVG Pattern */
+.coquette-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.35;
+    pointer-events: none;
+    /* Soft Floral SVG Pattern */
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f48fb1' fill-opacity='0.4'%3E%3Cpath d='M40 35c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm-7-4c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm14 0c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm-7 7c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm0-14c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z'/%3E%3Ccircle cx='40' cy='31' r='2' fill='%23f06292'/%3E%3C/g%3E%3Cg fill='%23a5d6a7' fill-opacity='0.3'%3E%3Cpath d='M35 38c-3 2-6 1-7-1s1-6 4-7c3-1 6 0 7 2s-1 5-4 6z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navbar Coquette Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 1.2rem 5%;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px dashed var(--coquette-rose);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: var(--coquette-accent);
+}
+
+.bow-icon {
+    margin-right: 6px;
+    color: var(--coquette-rose);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--coquette-text);
+    margin-left: 22px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--coquette-accent);
+    text-shadow: 0 0 5px var(--coquette-rose);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(252,228,236,0.8) 0%, rgba(255,249,251,0.9) 100%);
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap-reverse;
+}
+
+.hero-text .greeting {
+    font-size: 1.3rem;
+    color: var(--coquette-accent);
+    font-family: var(--font-heading);
+    font-style: italic;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    color: var(--coquette-text);
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+.hero-text .subtitle {
+    font-size: 1.1rem;
+    color: #6a5a58;
+    margin-bottom: 25px;
+}
+
+/* Coquette Ribbon Button */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: var(--coquette-rose);
+    color: var(--coquette-text);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 15px rgba(248, 187, 208, 0.6);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--coquette-accent);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Image Frame with Lace & Ribbon Effect */
+.hero-image-frame {
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    border-radius: 20px;
+    border: 3px dashed var(--coquette-rose);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.hero-image-frame .bow-tag {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.hero-image img {
+    width: 270px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Section Title Wrappers */
+.section-title-wrap {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.flower-badge {
+    color: var(--coquette-rose);
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+}
+
+.section h2, .about-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--coquette-text);
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* About Section */
+.about-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 60px 20px;
+    border-top: 1px solid var(--coquette-pink);
+    border-bottom: 1px solid var(--coquette-pink);
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    text-align: center;
+    color: #5a4b49;
+}
+
+/* Section Common */
+.section {
+    padding: 80px 0;
+}
+
+.bg-coquette-light {
+    background: rgba(252, 228, 236, 0.4);
+}
+
+/* Timeline Coquette Style */
+.timeline {
+    border-left: 2px dashed var(--coquette-rose);
+    margin: 0 auto;
+    padding-left: 25px;
+    max-width: 800px;
+}
+
+.timeline-item {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '🌸';
+    position: absolute;
+    left: -38px;
+    top: 0px;
+    font-size: 0.9rem;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--coquette-accent);
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--coquette-pink);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.timeline-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--coquette-text);
+}
+
+.timeline-content h4 {
+    font-size: 0.95rem;
+    color: var(--coquette-sage);
+    margin-bottom: 10px;
+}
+
+.timeline-content ul {
+    margin-left: 20px;
+}
+
+/* Cards & Grid Styling */
+.grid-cards, .grid-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card, .project-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: 1px solid var(--coquette-pink);
+    box-shadow: 0 6px 18px rgba(248, 187, 208, 0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover, .project-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-bow {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    font-size: 1.3rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--coquette-accent);
+    margin-bottom: 15px;
+}
+
+.card h3, .project-card h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 8px;
+    color: var(--coquette-text);
+}
+
+.card-subtitle {
+    font-size: 0.85rem;
+    color: var(--coquette-accent);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Footer Section */
+.footer {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+    color: var(--coquette-text);
+    text-align: center;
+    padding: 60px 20px 30px 20px;
+    border-top: 2px dashed #fff;
+}
+
+.footer-bow {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.footer h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.footer-subtext {
+    font-style: italic;
+    color: #6a5a58;
+}
+
+.contact-links {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: var(--coquette-text);
+    text-decoration: none;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    background: #fff;
+    color: var(--coquette-accent);
+}
+
+.copyright {
+    font-size: 0.85rem;
+    margin-top: 30px;
+    color: #7a6a68;
+}
+
+/* Responsif Layar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-content {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+}
